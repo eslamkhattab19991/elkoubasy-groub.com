@@ -44,5 +44,8 @@ The project is optimized for deployment on **Vercel**:
 1. Connect your GitHub repository to Vercel.
 2. The default build settings will automatically handle the Next.js optimization.
 
+### Troubleshooting 404 on Vercel
+If you encounter a 404 error, ensure that `basePath` is commented out or removed in `next.config.ts`, as Vercel typically serves from the root.
+
 ---
 © 2026 ElKoubasy Group. All rights reserved.
