@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-brand-green: #2d6a4f;
+  --color-brand-lime: #74c69d;
+  --color-brand-gold: #d4a853;
+  --color-brand-dark: #0f1c14;
+  --color-brand-light: #f4f9f1;
+  --color-brand-muted: #6b7f6e;
+
+  /* Semantic Overrides */
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-border: var(--border);
+  
+  --font-sans: "Inter", "Geist Sans", sans-serif;
+  --font-arabic: "IBM Plex Arabic", sans-serif;
+
+  --animate-infinite-scroll: scroll 40s linear infinite;
+
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+:root {
+  --bg: #f4f9f1;
+  --fg: #0f1c14;
+  --card: #ffffff;
+  --border: #d9e8d9;
+  --accent: #2d6a4f;
+}
+
+.dark {
+  --bg: #0f1c14;
+  --fg: #f4f9f1;
+  --card: #1a2e1f;
+  --border: #2d4a35;
+  --accent: #74c69d;
+}
+
+@layer base {
+  html {
+    background: var(--bg);
+    color: var(--fg);
+    scroll-behavior: smooth;
+  }
+  
+  [dir="rtl"] {
+    font-family: var(--font-arabic);
+  }
+  
+  [dir="ltr"] {
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-md bg-brand-dark/80 border-b border-white/10;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6 md:px-12 lg:px-16;
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "nav": {
+    "home": "Home",
+    "solutions": "Solutions",
+    "products": "Products",
+    "industries": "Industries",
+    "about": "About & Trust",
+    "quote": "Request a Quote"
+  },
+  "hero": {
+    "tagline": "Nature's Finest, Delivered.",
+    "subtitle": "100% natural juices, frozen fruits & vegetables — crafted to the highest international standards since 1999.",
+    "cta_primary": "Explore Our Products",
+    "cta_secondary": "Request a Quote"
+  },
+  "trust": {
+    "stat1_value": "1999",
+    "stat1_label": "Established",
+    "stat2_value": "ISO 9001",
+    "stat2_label": "Certified",
+    "stat3_value": "6+",
+    "stat3_label": "Retail Partners",
+    "stat4_value": "4",
+    "stat4_label": "Product Lines"
+  },
+  "about": {
+    "title": "Who We Are",
+    "body": "El Koubeisy for Food Industries has been a cornerstone of Egypt's natural food manufacturing landscape since 1999. Under the leadership of Chairman Sayed Shaikon, we have grown into one of Egypt's most trusted producers of 100% natural juices, frozen vegetables, and frozen fruits — all manufactured under strict international hygiene, safety, and quality standards.",
+    "founded_label": "Founded",
+    "founded_year": "1999",
+    "chairman_label": "Chairman",
+    "chairman_name": "Sayed Shaikon",
+    "location": "6th of October City, Giza, Egypt",
+    "cta": "Our Full Story"
+  },
+  "solutions": {
+    "title": "Our Solutions",
+    "subtitle": "From orchard to shelf — end-to-end natural food manufacturing.",
+    "cta": "View All Solutions",
+    "items": [
+      {
+        "id": "juice",
+        "title": "Natural Juice Processing",
+        "desc": "Cold-pressed and filled with no added sugar, preservatives, or artificial flavors."
+      },
+      {
+        "id": "frozen",
+        "title": "Frozen Produce",
+        "desc": "Fresh-frozen fruits and vegetables, IQF-processed to retain nutrients and freshness."
+      },
+      {
+        "id": "icecream",
+        "title": "Ice Cream Manufacturing",
+        "desc": "Premium frozen desserts using natural dairy and fruit ingredients."
+      },
+      {
+        "id": "private",
+        "title": "Private Label & OEM",
+        "desc": "Custom packaging and branding for retail chains and institutional clients."
+      }
+    ]
+  },
+  "products": {
+    "title": "Product Range",
+    "subtitle": "Premium quality across every category — natural, frozen, and crafted with care.",
+    "filter_all": "All",
+    "cta": "View All Products",
+    "enquire": "Enquire",
+    "categories": [
+      { "id": "juices", "label": "Natural Juices" },
+      { "id": "vegetables", "label": "Frozen Vegetables" },
+      { "id": "fruits", "label": "Frozen Fruits" },
+      { "id": "icecream", "label": "Ice Cream" }
+    ],
+    "items": [
+      { "id": "p1", "category": "juices", "name": "Mango Juice", "desc": "100% natural, zero sugar, 1L pack" },
+      { "id": "p2", "category": "juices", "name": "Orange Juice", "desc": "Cold-pressed, fresh flavor, 1L pack" },
+      { "id": "p3", "category": "juices", "name": "Strawberry Juice", "desc": "Rich in antioxidants, 1L pack" },
+      { "id": "p4", "category": "juices", "name": "Guava Juice", "desc": "Tropical taste, no additives, 1L pack" },
+      { "id": "p5", "category": "vegetables", "name": "Green Molokhia", "desc": "IQF frozen, 400g pack" },
+      { "id": "p6", "category": "vegetables", "name": "Mixed Vegetables", "desc": "Premium blend, 400g pack" },
+      { "id": "p7", "category": "vegetables", "name": "Green Peas", "desc": "Farm-fresh frozen, 400g pack" },
+      { "id": "p8", "category": "fruits", "name": "Mango Pieces", "desc": "Alphonso mango, 1kg pack" },
+      { "id": "p9", "category": "fruits", "name": "Pomegranate Arils", "desc": "Hand-selected, 1kg pack" },
+      { "id": "p10", "category": "fruits", "name": "Strawberry Halves", "desc": "Sweet and tart, 1kg pack" },
+      { "id": "p11", "category": "icecream", "name": "Mango Ice Cream Cup", "desc": "Natural mango, 100ml cup" },
+      { "id": "p12", "category": "icecream", "name": "Strawberry Ice Cream Cup", "desc": "Fresh strawberry, 100ml cup" }
+    ]
+  },
+  "industries": {
+    "title": "Industries We Serve",
+    "subtitle": "Trusted by leading retail chains, hotels, schools, and food service operators across Egypt.",
+    "cta": "Request a Quote",
+    "items": [
+      {
+        "id": "retail",
+        "title": "Retail Supermarkets",
+        "desc": "Private label and branded SKUs for hypermarkets and neighborhood chains."
+      },
+      {
+        "id": "hotels",
+        "title": "Hotels & Hospitality",
+        "desc": "Bulk frozen produce and juice concentrates for large-scale F&B operations."
+      },
+      {
+        "id": "schools",
+        "title": "Schools & Institutions",
+        "desc": "Health-forward, no-sugar juice products for canteens and meal programs."
+      },
+      {
+        "id": "catering",
+        "title": "Food Service & Catering",
+        "desc": "Consistent quality frozen fruit and vegetables for large-scale kitchens."
+      },
+      {
+        "id": "export",
+        "title": "Export Markets",
+        "desc": "ISO-certified products meeting GCC and EU import standards."
+      }
+    ]
+  },
+  "certificates": {
+    "title": "Certifications & Standards",
+    "subtitle": "Our quality is independently verified by international certification bodies.",
+    "items": [
+      { "id": "c1", "name": "ISO 9001:2015", "desc": "Quality Management System — certified production and quality control processes." },
+      { "id": "c2", "name": "NFSA Approval", "desc": "National Food Safety Authority of Egypt — full regulatory and import compliance." },
+      { "id": "c3", "name": "HACCP Compliance", "desc": "Hazard Analysis and Critical Control Points — safe food handling at every stage." },
+      { "id": "c4", "name": "GMP Standards", "desc": "Good Manufacturing Practices applied across all production lines and facilities." }
+    ]
+  },
+  "clients": {
+    "title": "Trusted By Egypt's Leading Retailers",
+    "subtitle": "From hypermarkets to premium schools, our products are sold across Egypt's top-tier outlets.",
+    "names": ["Gourmet Food Stores", "Alfa Market", "Awlad Ragab Co.", "Hyper 1", "Malvern College Egypt", "Ghazal Market"]
+  },
+  "quote": {
+    "title": "Request a Quote",
+    "subtitle": "Fill in the form below and our team will respond within 24 hours.",
+    "success_title": "Request Received",
+    "success_body": "Thank you. Our team will be in touch within 24 hours.",
+    "fields": {
+      "name": "Full Name",
+      "name_placeholder": "Your full name",
+      "company": "Company / Organization",
+      "company_placeholder": "Your company name",
+      "email": "Business Email",
+      "email_placeholder": "you@company.com",
+      "phone": "Phone Number",
+      "phone_placeholder": "+20 xxx xxx xxxx",
+      "country": "Country",
+      "country_placeholder": "Select your country",
+      "product": "Products of Interest",
+      "quantity": "Estimated Monthly Quantity",
+      "quantity_placeholder": "e.g. 500 cartons/month",
+      "message": "Additional Requirements",
+      "message_placeholder": "Packaging preferences, certifications required, delivery terms...",
+      "submit": "Send Request"
+    }
+  },
+  "footer": {
+    "tagline": "Naturally crafted. Internationally certified.",
+    "contact_title": "Contact Us",
+    "address": "Third Industrial Zone, 6th of October City, Giza, Egypt",
+    "phone": "+201112222490",
+    "email": "info@elkoubasy.com",
+    "rights": "© 2025 ElKoubasy Group. All rights reserved.",
+    "links_title": "Quick Links"
+  },
+  "cta_banner": {
+    "heading": "Ready to Source Quality?",
+    "sub": "Let us supply your business with certified natural food products.",
+    "button": "Request a Quote"
+  }
+}
