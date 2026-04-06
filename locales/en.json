@@ -8,8 +8,8 @@
     "quote": "Request a Quote"
   },
   "hero": {
-    "tagline": "Nature's Finest, Delivered.",
-    "subtitle": "100% natural juices, frozen fruits & vegetables — crafted to the highest international standards since 1999.",
+    "tagline": "From nature, straight to you.",
+    "subtitle": "100% natural juices, frozen fruits, and vegetables — produced and packaged to the highest international standards since 1999, with a strong commitment to quality and safety.",
     "cta_primary": "Explore Our Products",
     "cta_secondary": "Request a Quote"
   },
@@ -67,24 +67,96 @@
     "cta": "View All Products",
     "enquire": "Enquire",
     "categories": [
-      { "id": "juices", "label": "Natural Juices" },
-      { "id": "vegetables", "label": "Frozen Vegetables" },
-      { "id": "fruits", "label": "Frozen Fruits" },
-      { "id": "icecream", "label": "Ice Cream" }
+      {
+        "id": "juices",
+        "label": "Natural Juices"
+      },
+      {
+        "id": "vegetables",
+        "label": "Frozen Vegetables"
+      },
+      {
+        "id": "fruits",
+        "label": "Frozen Fruits"
+      },
+      {
+        "id": "icecream",
+        "label": "Ice Cream"
+      }
     ],
     "items": [
-      { "id": "p1", "category": "juices", "name": "Mango Juice", "desc": "100% natural, zero sugar, 1L pack" },
-      { "id": "p2", "category": "juices", "name": "Orange Juice", "desc": "Cold-pressed, fresh flavor, 1L pack" },
-      { "id": "p3", "category": "juices", "name": "Strawberry Juice", "desc": "Rich in antioxidants, 1L pack" },
-      { "id": "p4", "category": "juices", "name": "Guava Juice", "desc": "Tropical taste, no additives, 1L pack" },
-      { "id": "p5", "category": "vegetables", "name": "Green Molokhia", "desc": "IQF frozen, 400g pack" },
-      { "id": "p6", "category": "vegetables", "name": "Mixed Vegetables", "desc": "Premium blend, 400g pack" },
-      { "id": "p7", "category": "vegetables", "name": "Green Peas", "desc": "Farm-fresh frozen, 400g pack" },
-      { "id": "p8", "category": "fruits", "name": "Mango Pieces", "desc": "Alphonso mango, 1kg pack" },
-      { "id": "p9", "category": "fruits", "name": "Pomegranate Arils", "desc": "Hand-selected, 1kg pack" },
-      { "id": "p10", "category": "fruits", "name": "Strawberry Halves", "desc": "Sweet and tart, 1kg pack" },
-      { "id": "p11", "category": "icecream", "name": "Mango Ice Cream Cup", "desc": "Natural mango, 100ml cup" },
-      { "id": "p12", "category": "icecream", "name": "Strawberry Ice Cream Cup", "desc": "Fresh strawberry, 100ml cup" }
+      {
+        "id": "p1",
+        "category": "juices",
+        "name": "Mango Juice",
+        "desc": "100% natural, zero sugar, 1L pack"
+      },
+      {
+        "id": "p2",
+        "category": "juices",
+        "name": "Orange Juice",
+        "desc": "Cold-pressed, fresh flavor, 1L pack"
+      },
+      {
+        "id": "p3",
+        "category": "juices",
+        "name": "Strawberry Juice",
+        "desc": "Rich in antioxidants, 1L pack"
+      },
+      {
+        "id": "p4",
+        "category": "juices",
+        "name": "Guava Juice",
+        "desc": "Tropical taste, no additives, 1L pack"
+      },
+      {
+        "id": "p5",
+        "category": "vegetables",
+        "name": "Green Molokhia",
+        "desc": "IQF frozen, 400g pack"
+      },
+      {
+        "id": "p6",
+        "category": "vegetables",
+        "name": "Mixed Vegetables",
+        "desc": "Premium blend, 400g pack"
+      },
+      {
+        "id": "p7",
+        "category": "vegetables",
+        "name": "Green Peas",
+        "desc": "Farm-fresh frozen, 400g pack"
+      },
+      {
+        "id": "p8",
+        "category": "fruits",
+        "name": "Mango Pieces",
+        "desc": "Alphonso mango, 1kg pack"
+      },
+      {
+        "id": "p9",
+        "category": "fruits",
+        "name": "Pomegranate Arils",
+        "desc": "Hand-selected, 1kg pack"
+      },
+      {
+        "id": "p10",
+        "category": "fruits",
+        "name": "Strawberry Halves",
+        "desc": "Sweet and tart, 1kg pack"
+      },
+      {
+        "id": "p11",
+        "category": "icecream",
+        "name": "Mango Ice Cream Cup",
+        "desc": "Natural mango, 100ml cup"
+      },
+      {
+        "id": "p12",
+        "category": "icecream",
+        "name": "Strawberry Ice Cream Cup",
+        "desc": "Fresh strawberry, 100ml cup"
+      }
     ]
   },
   "industries": {
@@ -123,16 +195,39 @@
     "title": "Certifications & Standards",
     "subtitle": "Our quality is independently verified by international certification bodies.",
     "items": [
-      { "id": "c1", "name": "ISO 9001:2015", "desc": "Quality Management System — certified production and quality control processes." },
-      { "id": "c2", "name": "NFSA Approval", "desc": "National Food Safety Authority of Egypt — full regulatory and import compliance." },
-      { "id": "c3", "name": "HACCP Compliance", "desc": "Hazard Analysis and Critical Control Points — safe food handling at every stage." },
-      { "id": "c4", "name": "GMP Standards", "desc": "Good Manufacturing Practices applied across all production lines and facilities." }
+      {
+        "id": "c1",
+        "name": "ISO 9001:2015",
+        "desc": "Quality Management System — certified production and quality control processes."
+      },
+      {
+        "id": "c2",
+        "name": "NFSA Approval",
+        "desc": "National Food Safety Authority of Egypt — full regulatory and import compliance."
+      },
+      {
+        "id": "c3",
+        "name": "HACCP Compliance",
+        "desc": "Hazard Analysis and Critical Control Points — safe food handling at every stage."
+      },
+      {
+        "id": "c4",
+        "name": "GMP Standards",
+        "desc": "Good Manufacturing Practices applied across all production lines and facilities."
+      }
     ]
   },
   "clients": {
     "title": "Trusted By Egypt's Leading Retailers",
     "subtitle": "From hypermarkets to premium schools, our products are sold across Egypt's top-tier outlets.",
-    "names": ["Gourmet Food Stores", "Alfa Market", "Awlad Ragab Co.", "Hyper 1", "Malvern College Egypt", "Ghazal Market"]
+    "names": [
+      "Gourmet Food Stores",
+      "Alfa Market",
+      "Awlad Ragab Co.",
+      "Hyper 1",
+      "Malvern College Egypt",
+      "Ghazal Market"
+    ]
   },
   "quote": {
     "title": "Request a Quote",
