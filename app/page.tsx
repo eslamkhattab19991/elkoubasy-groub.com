@@ -10,6 +10,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import CategoryCard from '@/components/ui/CategoryCard';
 import ClientCarousel from '@/components/ui/ClientCarousel';
 import CinematicHero from '@/components/ui/CinematicHero';
+import CinematicProductRange from '@/components/ui/CinematicProductRange';
 import { useLanguage } from '@/context/LanguageContext';
 import { staggerFadeIn, killAllTriggers, fadeInUp } from '@/lib/animations';
 
@@ -85,33 +86,8 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
-      {/* 4. PRODUCTS PREVIEW */}
-      <SectionWrapper id="products" dark className="rounded-t-[60px] py-16 md:py-32">
-        <SectionHeading 
-          title={t.products.title}
-          subtitle={t.products.subtitle}
-          dark
-          className="mb-32 md:mb-48"
-        />
-        
-        <div className="products-grid grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {t.products.categories.slice(0, 3).map((cat, idx) => (
-             <div key={cat.id} className="category-card">
-                <CategoryCard 
-                  id={cat.id} 
-                  label={cat.label} 
-                  imageSrc={`/assets/catagory/imgi_${idx + 1}_category.webp`}
-                />
-             </div>
-          ))}
-        </div>
-        
-        <div className="text-center">
-          <Link href="/products" className="inline-flex items-center px-10 py-5 rounded-full border border-brand-gold text-brand-gold font-bold hover:bg-brand-gold hover:text-brand-dark transition-all duration-300">
-            {t.products.cta}
-          </Link>
-        </div>
-      </SectionWrapper>
+      {/* 4. PRODUCTS PREVIEW (Cinematic) */}
+      <CinematicProductRange />
 
       {/* 5. ABOUT PREVIEW */}
       <SectionWrapper id="about">

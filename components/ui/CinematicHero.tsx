@@ -28,12 +28,12 @@ export default function CinematicHero() {
     const context = canvas.getContext('2d');
     if (!context) return;
 
-    // 23 frames from 047 to 069
-    const frameCount = 23;
+    // 176 frames from 001 to 176
+    const frameCount = 176;
     const currentFrame = (index: number) => {
-      const actualIndex = index + 47;
+      const actualIndex = index + 1;
       const paddedId = actualIndex.toString().padStart(3, '0');
-      return `/assets/sequence2/ezgif-frame-${paddedId}.jpg`;
+      return `/assets/sequence_hero/ezgif-frame-${paddedId}.jpg`;
     };
 
     const images: HTMLImageElement[] = [];
