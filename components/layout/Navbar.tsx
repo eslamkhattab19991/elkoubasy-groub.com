@@ -6,20 +6,26 @@ import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
 import { fadeInUp } from '@/lib/animations';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const { t, lang, setLang } = useLanguage();
   const { theme, toggleTheme } = useTheme();
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      // If we are on the homepage, hero is pinned for ~3500px, keep it transparent. 
+      // Otherwise, assume a standard 20px threshold.
+      const threshold = pathname === '/' ? 3500 : 20;
+      setIsScrolled(window.scrollY > threshold);
     };
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Trigger early check
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [pathname]);
 
   const navLinks = [
     { name: t.nav.home, href: '/' },
@@ -33,7 +39,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'backdrop-blur-md bg-brand-dark/80 border-b border-white/10 py-3' : 'bg-transparent py-5'
     }`}>
-      <div className="container-custom flex items-center justify-between">
+      <div className="w-full px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="relative h-10 w-32 md:h-12 md:w-40 transition-transform hover:scale-105">
           <Image 

@@ -9,20 +9,18 @@ import SectionWrapper from '@/components/layout/SectionWrapper';
 import SectionHeading from '@/components/ui/SectionHeading';
 import CategoryCard from '@/components/ui/CategoryCard';
 import ClientCarousel from '@/components/ui/ClientCarousel';
+import CinematicHero from '@/components/ui/CinematicHero';
 import { useLanguage } from '@/context/LanguageContext';
-import { fadeInUp, staggerFadeIn, imageReveal, killAllTriggers } from '@/lib/animations';
+import { staggerFadeIn, killAllTriggers, fadeInUp } from '@/lib/animations';
 
 export default function Home() {
   const { t, lang } = useLanguage();
-  const heroRef = useRef<HTMLDivElement>(null);
   const trustRef = useRef<HTMLDivElement>(null);
   const solutionsRef = useRef<HTMLDivElement>(null);
   const productsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Animations
-    fadeInUp('.hero-content', 0.2);
-    imageReveal(document.querySelector('.hero-image'));
     staggerFadeIn('.trust-grid', '.trust-item', 0.15);
     fadeInUp('.solutions-header');
     staggerFadeIn('.solutions-grid', '.solution-card', 0.2);
@@ -36,65 +34,7 @@ export default function Home() {
       <Navbar />
 
       {/* 1. HERO SECTION */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-brand-dark">
-        {/* Background Parallax Image */}
-        <div className="absolute inset-0 z-0 opacity-20">
-          <Image 
-            src="/assets/random/imgi_ref (1).webp" 
-            alt="Nature Background" 
-            fill 
-            className="object-cover"
-            priority
-          />
-        </div>
-        
-        <div className="container-custom relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="hero-content">
-            <div className="inline-flex items-center space-x-3 rtl:space-x-reverse px-4 py-2 rounded-full bg-brand-green/20 border border-brand-green/30 mb-8 text-brand-lime text-xs font-bold uppercase tracking-widest">
-              <span className="w-2 h-2 rounded-full bg-brand-lime animate-pulse" />
-              <span>International Food Safety Standards</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] mb-8 tracking-tighter">
-              {t.hero.tagline.split(', ').map((part, i) => (
-                <span key={i} className={i === 1 ? 'text-brand-gold' : ''}>
-                  {part}{i === 0 ? ',' : ''} <br className="hidden md:block" />
-                </span>
-              ))}
-            </h1>
-            
-            <p className="text-xl text-brand-muted max-w-xl mb-12 leading-relaxed">
-              {t.hero.subtitle}
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
-              <Link href="/products" className="px-10 py-5 rounded-2xl bg-brand-green text-white font-bold text-lg hover:bg-brand-green/90 transition-all hover:shadow-2xl hover:shadow-brand-green/20 text-center">
-                {t.hero.cta_primary}
-              </Link>
-              <Link href="/quote" className="px-10 py-5 rounded-2xl border border-white/20 text-white font-bold text-lg hover:bg-white/10 transition-all text-center">
-                {t.hero.cta_secondary}
-              </Link>
-            </div>
-          </div>
-          
-          <div className="hero-image relative h-[500px] lg:h-[700px] hidden lg:block">
-             {/* Floating Bottle or Lineup */}
-             <Image 
-              src="/assets/new/hero_png.png" 
-              alt="ElKoubasy Products" 
-              fill 
-              className="object-contain"
-              priority
-            />
-          </div>
-        </div>
-        
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center">
-          <span className="text-[10px] text-white/30 uppercase tracking-[0.3em] mb-4">Scroll to discover</span>
-          <div className="w-[1px] h-12 bg-gradient-to-b from-brand-gold to-transparent" />
-        </div>
-      </section>
+      <CinematicHero />
 
       {/* 2. TRUST STRIP */}
       <div ref={trustRef} className="bg-white dark:bg-brand-dark/50 border-y border-border/10 py-12">
