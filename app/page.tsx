@@ -8,11 +8,13 @@ import Footer from '@/components/layout/Footer';
 import SectionWrapper from '@/components/layout/SectionWrapper';
 import SectionHeading from '@/components/ui/SectionHeading';
 import CategoryCard from '@/components/ui/CategoryCard';
-import ClientCarousel from '@/components/ui/ClientCarousel';
-import CinematicHero from '@/components/ui/CinematicHero';
-import CinematicProductRange from '@/components/ui/CinematicProductRange';
+import dynamic from 'next/dynamic';
 import { useLanguage } from '@/context/LanguageContext';
 import { staggerFadeIn, killAllTriggers, fadeInUp } from '@/lib/animations';
+
+const CinematicHero = dynamic(() => import('@/components/ui/CinematicHero'), { ssr: true });
+const CinematicProductRange = dynamic(() => import('@/components/ui/CinematicProductRange'), { ssr: false });
+const ClientCarousel = dynamic(() => import('@/components/ui/ClientCarousel'), { ssr: false });
 
 export default function Home() {
   const { t, lang } = useLanguage();
@@ -97,6 +99,8 @@ export default function Home() {
               src="/assets/random/imgi_ref (3).webp" 
               alt="Production Quality" 
               fill 
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              priority
               className="object-cover"
             />
             {/* Visual Accent */}
