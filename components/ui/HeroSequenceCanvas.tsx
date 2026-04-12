@@ -16,9 +16,9 @@ export default function HeroSequenceCanvas() {
     const context = canvas.getContext('2d');
     if (!context) return;
 
-    // Based on user files ezgif-frame-009 to 032
-    // total 24 frames
-    const frameCount = 24;
+    // Based on user files
+    // total 30 frames
+    const frameCount = 30;
     // Padded string e.g., 009, 010... etc
     const currentFrame = (index: number) => {
       const actualIndex = index + 9;

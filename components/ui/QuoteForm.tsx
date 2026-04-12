@@ -7,16 +7,47 @@ const QuoteForm = () => {
   const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+  
+  const [formData, setFormData] = useState({
+    name: '',
+    company: '',
+    email: '',
+    phone: '',
+    product: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setSubmitted(true);
+    try {
+      const res = await fetch('/api/quote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        throw new Error('Failed to submit quote request');
+      }
+
+      setSubmitted(true);
+      setFormData({ name: '', company: '', email: '', phone: '', product: '', message: '' });
+    } catch (err) {
+      console.error(err);
+      setError('An error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -41,11 +72,20 @@ const QuoteForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      {error && (
+        <div className="p-4 bg-red-500/10 border border-red-500/50 text-red-500 rounded-xl text-sm font-medium">
+          {error}
+        </div>
+      )}
+      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className="block text-sm font-bold mb-2 uppercase tracking-wider text-brand-muted">{t.quote.fields.name}</label>
           <input 
             required
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
             type="text" 
             placeholder={t.quote.fields.name_placeholder}
             className="w-full px-6 py-4 rounded-xl bg-white dark:bg-white/5 border border-border focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-all"
@@ -55,6 +95,9 @@ const QuoteForm = () => {
           <label className="block text-sm font-bold mb-2 uppercase tracking-wider text-brand-muted">{t.quote.fields.company}</label>
           <input 
             required
+            name="company"
+            value={formData.company}
+            onChange={handleChange}
             type="text" 
             placeholder={t.quote.fields.company_placeholder}
             className="w-full px-6 py-4 rounded-xl bg-white dark:bg-white/5 border border-border focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-all"
@@ -67,6 +110,9 @@ const QuoteForm = () => {
           <label className="block text-sm font-bold mb-2 uppercase tracking-wider text-brand-muted">{t.quote.fields.email}</label>
           <input 
             required
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
             type="email" 
             placeholder={t.quote.fields.email_placeholder}
             className="w-full px-6 py-4 rounded-xl bg-white dark:bg-white/5 border border-border focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-all"
@@ -76,6 +122,9 @@ const QuoteForm = () => {
           <label className="block text-sm font-bold mb-2 uppercase tracking-wider text-brand-muted">{t.quote.fields.phone}</label>
           <input 
             required
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
             type="tel" 
             placeholder={t.quote.fields.phone_placeholder}
             className="w-full px-6 py-4 rounded-xl bg-white dark:bg-white/5 border border-border focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-all"
@@ -85,7 +134,12 @@ const QuoteForm = () => {
 
       <div>
         <label className="block text-sm font-bold mb-2 uppercase tracking-wider text-brand-muted">{t.quote.fields.product}</label>
-        <select className="w-full px-6 py-4 rounded-xl bg-white dark:bg-white/5 border border-border focus:border-brand-green outline-none transition-all">
+        <select 
+          name="product"
+          value={formData.product}
+          onChange={handleChange}
+          className="w-full px-6 py-4 rounded-xl bg-white dark:bg-white/5 border border-border focus:border-brand-green outline-none transition-all"
+        >
           <option value="">{t.products.filter_all}</option>
           {t.products.categories.map(cat => (
             <option key={cat.id} value={cat.id}>{cat.label}</option>
@@ -96,6 +150,9 @@ const QuoteForm = () => {
       <div>
         <label className="block text-sm font-bold mb-2 uppercase tracking-wider text-brand-muted">{t.quote.fields.message}</label>
         <textarea 
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
           rows={5}
           placeholder={t.quote.fields.message_placeholder}
           className="w-full px-6 py-4 rounded-xl bg-white dark:bg-white/5 border border-border focus:border-brand-green focus:ring-1 focus:ring-brand-green outline-none transition-all resize-none"

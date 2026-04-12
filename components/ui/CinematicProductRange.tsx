@@ -31,7 +31,7 @@ export default function CinematicProductRange() {
     const context = canvas.getContext('2d');
     if (!context) return;
 
-    const frameCount = 120; // 001 to 120
+    const frameCount = 30; // 001 to 030
 
     const currentFrame = (index: number) => {
       const actualIndex = index + 1;
